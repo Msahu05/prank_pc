@@ -1,0 +1,68 @@
+/* Reset (common for all pages) */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, Segoe UI, Roboto, Arial;
+}
+
+/* ---------------- HOME PAGE ---------------- */
+.home-body {
+  background: url("/static/images/home-design-new.png") no-repeat center center;
+  background-size: cover;     /* fills screen fully */
+  display: flex;
+  justify-content: center;    /* center horizontally */
+  align-items: center;        /* center vertically */
+}
+
+.start-btn {
+  width: 200px;
+  height: 150px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: url("/static/images/btn-bg.png") no-repeat center center;
+  background-size: cover;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6); 
+}
+.start-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------- PRANK PAGE ---------------- */
+.prank-body {
+  background: black;  /* full black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prank-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.prank-body video {
+  max-width: 480px;   /* fixed max width */
+  width: 100%;        /* responsive scaling */
+  height: auto;       /* keep aspect ratio */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+.prank-body .caption {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
+  text-shadow: 2px 2px 8px black;
+}

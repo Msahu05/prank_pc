@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prank App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="prank-body">
+  <div class="prank-wrapper">
+    <video id="prankVideo" autoplay muted></video>
+    <div class="caption">You’ve been pranked 😂</div>
+  </div>
+
+  <script>
+    const video = document.getElementById("prankVideo");
+    video.src = "{{ url_for('static', filename='videos/prank.mp4') }}";
+
+    // Enable sound after first user click
+    document.body.addEventListener("click", () => {
+    video.currentTime = 0;  // restart video
+    video.muted = false;
+    video.play();
+    }, { once: true });
+    // Prevent download/right-click
+    video.addEventListener("contextmenu", e => e.preventDefault());
+  </script>
+</body>
+</html>
