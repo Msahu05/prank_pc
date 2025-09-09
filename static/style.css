@@ -50,13 +50,15 @@ html, body {
   width: 100%;
 }
 
-.prank-body video {
-  max-width: 480px;   /* fixed max width */
-  width: 100%;        /* responsive scaling */
-  height: auto;       /* keep aspect ratio */
+.prank-overlay video {
+  max-width: 480px;    /* don't let it get too wide */
+  max-height: 60vh;    /* video won't exceed 60% of screen height */
+  width: 100%;         
+  height: auto;        /* keep aspect ratio */
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.6);
 }
+
 
 .prank-body .caption {
   margin-top: 20px;
